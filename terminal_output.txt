@@ -1,0 +1,12 @@
+=== Replication test ===
+Initial: Primary=10, Secondary=10
+Primary received update: 12
+After replication: Primary=12, Secondary=12
+
+=== Stale read test ===
+Primary after update: 9
+Secondary during delay: 12 (stale)
+
+=== Recovery and convergence ===
+After recovery: Primary=9, Secondary=9
+PASS: replicas converged to stock=9
